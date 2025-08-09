@@ -15,7 +15,7 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
 
       - name: Build EXE
-        run: cl Terminator.sln /FeTerminator.exe user32.lib kernel32.lib advapi32.lib
+        run: cl Terminator.vcxproj /FeTerminator.exe user32.lib kernel32.lib advapi32.lib
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
